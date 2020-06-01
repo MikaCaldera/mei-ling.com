@@ -12,3 +12,17 @@
 		</div>
 	</div>
 </header>
+
+<!-- Form Html -->
+<section class="form container">
+  <div class="col-lg-12 form mx-auto">
+
+    {% assign form = site.data.form %}
+    {% if form.html %}
+      <div>
+        {{ form.html }}
+      </div>
+    {% endif %}
+
+  </div>
+</section>
