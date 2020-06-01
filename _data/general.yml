@@ -1,10 +1,11 @@
-title: Site Name
-description: 'Description '
-googleanalytics: '123456'
-logo: assets/images/large-logo.png
-message: 'Header Message '
-footer: Footer Message
+title: Mei-Ling Siu-Caldera
+description: Life & Health Insurance Agent
+googleanalytics: "123456"
+logo: assets/images/icon.png
+message: "Header Message "
+header: Life & Health Insurance Agent
+footer: Life & Health Insurance Agent
 number:
-  greeting: 'Hello '
-  link: '8605555555'
-  text: Call Us 860 555 5555
+  greeting: Call
+  link: "860-874-1495 "
+  text: "Call Us 860-874-1495 "
