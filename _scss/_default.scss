@@ -1,0 +1,7 @@
+//Structure & Layout Scss
+.home, .page {
+  min-height: 65vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}

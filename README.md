@@ -1,116 +1,102 @@
-# Victor Hugo
+<h1 align="center">
+ Mika Starter Pack
+</h1>
 
-**A Hugo boilerplate for creating truly epic websites**
+## Prerequisites
+The following tools should be installed before starting:
+* NodeJS, npm
+* Ruby, Gem, Bundler
+* Jekyll
+* Sass
 
-This is a boilerplate for using [Hugo](https://gohugo.io/) as a static site generator and [Webpack](https://webpack.js.org/) as your asset pipeline.
+## Quick start
+1. Make sure you have all the prerequisites above installed.
+2. Clone this repo using `git clone https://github.com/sandoche/Jekyll-webpack-boilerplate.git`
+3. Move to the appropriate directory: `cd Jekyll-webpack-boilerplate`.
+4. Run `npm install` and `bundler install` in order to install dependencies and clean the git repo.
+5. Run `npm start` to start the development server (or use `npm start`).
 
-Victor Hugo setup to use [PostCSS](http://postcss.org/) and [Babel](https://babeljs.io/) for CSS and JavaScript compiling/transpiling.
+## Quick deployment
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/sandoche/Jekyll-webpack-boilerplate)
 
-This project is released under the [MIT license](LICENSE). Please make sure you understand its implications and guarantees.
+Here is a demo of the Netlify build: https://dazzling-swartz-9738b5.netlify.com
 
-## Usage
+### Netlify CMS
 
-### :exclamation: Prerequisites
+It also works with Netlify CMS after enabling  Identity service and Git Gateway: https://www.netlifycms.org/docs/add-to-your-site/#enable-identity-and-git-gateway
 
-You need to have the latest/LTS [node](https://nodejs.org/en/download/) and [npm](https://www.npmjs.com/get-npm) versions installed in order to use Victor Hugo.
+See `admin/config.yml` for more customization.
 
-Next step, clone this repository and run:
+## Development
+To start the development server just run  `npm start`
 
-```bash
-npm install
+### Folder structure
+```
+.
+├── 404.html
+├── about.md
+├── blog.md
+├── config <--- This folder contains the different Webpack config files
+│   ├── optimization-fix <--- A fix for optimization, do not delete this folder
+│   ├── postcss.config.js <--- Post css config
+│   ├── sw.config.js <--- The service worker config file
+│   ├── webpack.common.js <--- The common Webpack config file for all the environment
+│   ├── webpack.dev.js <--- Dev Webpack environment config file
+│   ├── webpack.optim.js <--- This is used to add the css critical path in the default template
+│   ├── webpack.prod.js <--- Prod Webpack environment config file
+│   └── webpack.pwa.js <--- Please edit this file if you want a PWA
+├── _config.yml <--- The Jekyll config file that you need to set up
+├── Gemfile
+├── Gemfile.lock
+├── _i18n <--- Contains your posts and data in the language you need (check below how to remove it)
+├── _images <--- Put all your images here, you will access them with this path /assets/images/
+│   ├── icon.png <--- Replace this with your icon
+│   └── large-icon.png <--- Replace this with your Facebook Open Graph picture
+├── icon.png <--- Same with this one
+├── _includes
+├── index.md
+├── _layouts
+│   ├── amp.html <--- The layout for Accelerated mobile page
+│   ├── blog.html
+│   ├── home.html
+│   ├── page.html
+│   └── post.html
+├── LICENSE
+├── package.json <--- Update this file with your information especially the name which is used for the meta tags
+├── README.md
+├── _scss <--- Put your partials here
+│   └── _default.scss
+├── _src <--- This folder contains your JS and SASS entry points
+│   ├── index.js
+│   ├── index.scss
+│   └── template
+│       └── default.html <--- Here is the main default template, feel free to edit it but do not delete it
+├── webpack.config.js
+└── package-lock.json
 ```
 
-This will take some time and will install all packages necessary to run Victor Hugo and its tasks.
+## Build
 
-### :construction_worker: Development
+### Optimized website
+To build the website run the following line
 
-While developing your website, use:
-
-```bash
-npm start
 ```
-
-or for developing your website with `hugo server --buildDrafts --buildFuture`, use:
-
-```bash
-npm run preview
-```
-
-Then visit http://localhost:3000/ _- or a new browser windows popped-up already -_ to preview your new website. Webpack Dev Server will automatically reload the CSS or refresh the whole page, when stylesheets or content changes.
-
-### :package: Static build
-
-To build a static version of the website inside the `/dist` folder, run:
-
-```bash
 npm run build
+
+# or if you want the critical css
+npm run build:optim
+```
+The built website will be in `_site` folder.
+
+You can also run a local server to test it with this command
+```
+npm run serve:dist
 ```
 
-To get a preview of posts or articles not yet published, run:
+\
 
-```bash
-npm run build:preview
+### Clean assets & \_site folders
+This will remove the generated folders
 ```
-
-See [package.json](package.json#L8) for all tasks.
-
-## Structure
-
+npm run clean:project
 ```
-|--site                // Everything in here will be built with hugo
-|  |--content          // Pages and collections - ask if you need extra pages
-|  |--data             // YAML data files with any data for use in examples
-|  |--layouts          // This is where all templates go
-|  |  |--partials      // This is where includes live
-|  |  |--index.html    // The index page
-|  |--static           // Files in here ends up in the public folder
-|--src                 // Files that will pass through the asset pipeline
-|  |--css              // Webpack will bundle imported css separately
-|  |--index.js         // index.js is the webpack entry for your css & js assets
-```
-
-## Basic Concepts
-
-You can read more about Hugo's template language in their documentation here:
-
-https://gohugo.io/templates/overview/
-
-The most useful page there is the one about the available functions:
-
-https://gohugo.io/templates/functions/
-
-For assets that are completely static and don't need to go through the asset pipeline,
-use the `site/static` folder. Images, font-files, etc, all go there.
-
-Files in the static folder end up in the web root. So a file called `site/static/favicon.ico`
-will end up being available as `/favicon.ico` and so on...
-
-The `src/index.js` file is the entrypoint for webpack and will be built to `/dist/main.js`
-
-You can use **ES6** and use both relative imports or import libraries from npm.
-
-Any CSS file imported into the `index.js` will be run through Webpack, compiled with [PostCSS Next](http://cssnext.io/), and
-minified to `/dist/[name].[hash:5].css`. Import statements will be resolved as part of the build.
-
-## Environment variables
-
-To separate the development and production _- aka build -_ stages, all gulp tasks run with a node environment variable named either `development` or `production`.
-
-You can access the environment variable inside the theme files with `getenv "NODE_ENV"`. See the following example for a conditional statement:
-
-    {{ if eq (getenv "NODE_ENV") "development" }}You're in development!{{ end }}
-
-All tasks starting with _build_ set the environment variable to `production` - the other will set it to `development`.
-
-## Deploying to Netlify
-
-- Push your clone to your own GitHub repository.
-- [Create a new site on Netlify](https://app.netlify.com/start) and link the repository.
-
-Now Netlify will build and deploy your site whenever you push to git.
-
-You can also click this button:
-
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/netlify/victor-hugo)
-
-## Enjoy!! 😸
