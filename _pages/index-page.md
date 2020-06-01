@@ -1,8 +1,9 @@
 ---
 layout: page
-title: Home Page
+title: Landing Page
 permalink: /
-description: About this page...
+description: "Mei-Ling Siu-Caldera is an Insurance Broker serving the needs of
+  individuals and families who need Health and Life Insurance products. "
 section:
   - alt: Image Description
     cta:
@@ -22,30 +23,6 @@ section:
     header: Header
     textcolor: text-white
     type: wysiwyg
-  - content: Content
-    header: Header
-    service:
-      - alt: Image Description
-        image: https://placekitten.com/640/360
-        link: URL
-        text: Text
-      - alt: Image Description
-        image: https://placekitten.com/640/360
-        link: URL
-        text: Text
-      - alt: Image Description
-        image: https://placekitten.com/640/360
-        link: URL
-        text: Text
-      - alt: Image Description
-        image: https://placekitten.com/640/360
-        link: URL
-        text: Text
-      - alt: Image Description
-        image: https://placekitten.com/640/360
-        link: URL
-        text: Text
-    type: services
   - ctas:
       - alt: Image Description
         blurb: Blurb
