@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Index Page
+title: Home Page
 permalink: /
 description: About this page...
 section:
@@ -9,13 +9,13 @@ section:
       link: URL
       title: Title
     headline: Headline
-    heroimage: 'https://placekitten.com/640/360'
+    heroimage: https://placekitten.com/640/360
     subheader: Subheader
     type: fullhero
   - alt: Image Description
     blurb: Blurb
     header: Header
-    heroimage: 'https://placekitten.com/640/360'
+    heroimage: https://placekitten.com/640/360
     type: halfhero
   - bgcolor: bg-secondary
     content: Content
@@ -26,23 +26,23 @@ section:
     header: Header
     service:
       - alt: Image Description
-        image: 'https://placekitten.com/640/360'
+        image: https://placekitten.com/640/360
         link: URL
         text: Text
       - alt: Image Description
-        image: 'https://placekitten.com/640/360'
+        image: https://placekitten.com/640/360
         link: URL
         text: Text
       - alt: Image Description
-        image: 'https://placekitten.com/640/360'
+        image: https://placekitten.com/640/360
         link: URL
         text: Text
       - alt: Image Description
-        image: 'https://placekitten.com/640/360'
+        image: https://placekitten.com/640/360
         link: URL
         text: Text
       - alt: Image Description
-        image: 'https://placekitten.com/640/360'
+        image: https://placekitten.com/640/360
         link: URL
         text: Text
     type: services
@@ -50,31 +50,30 @@ section:
       - alt: Image Description
         blurb: Blurb
         header: Header
-        image: 'https://placekitten.com/640/360'
+        image: https://placekitten.com/640/360
       - alt: Image Description
         blurb: Blurb
         header: Header
-        image: 'https://placekitten.com/640/360'
+        image: https://placekitten.com/640/360
       - alt: Image Description
         blurb: Blurb
         header: Header
-        image: 'https://placekitten.com/640/360'
+        image: https://placekitten.com/640/360
     type: cta
-  - alignimage: '1'
+  - alignimage: "1"
     alt: Image Description
     content: Content
     header: Header
-    image: 'https://placekitten.com/640/360'
+    image: https://placekitten.com/640/360
     link: Link Title
     type: mediatext
     url: Url
-  - alignimage: '3'
+  - alignimage: "3"
     alt: Image Description
     content: Content
     header: Header
-    image: 'https://placekitten.com/640/360'
+    image: https://placekitten.com/640/360
     link: Link Title
     type: mediatext
     url: Url
 ---
-
