@@ -1,4 +1,13 @@
+/** Config */
 @import 'config';
+@import 'config/variables';
+@import 'config/external';
+
+/** Common */
+//@import 'common/global';
+
+@import 'partials';
+@import 'components';
 
 // Pull in the stalfos lib
 @import '../../node_modules/stalfos/stalfos.scss';
@@ -59,18 +68,3 @@ img {
 @import 'utilities/inner-wrapper';
 @import 'utilities/visually-hidden';
 @import 'utilities/wrapper';
-
-// Components
-@import 'components/button';
-@import 'components/form';
-@import 'components/heading-permalink';
-@import 'components/intro';
-@import 'components/nav';
-@import 'components/pagination';
-@import 'components/post';
-@import 'components/post-list';
-@import 'components/site-head';
-@import 'components/site-foot';
-@import 'components/skip-link';
-@import 'components/syntax-highlighting';
-@import 'components/video-player';

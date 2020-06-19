@@ -3,7 +3,7 @@
     --flow-space: #{get-size(800)};
 
     /**
-     * Generic HTML styles 
+     * Generic HTML styles
      */
     h2 + *,
     h3 + * {
@@ -15,7 +15,7 @@
       position: relative;
       /*display: flex;*/
 
-      @include apply-utility('leading', 'tight');
+      // @include apply-utility('leading', 'tight');
     }
 
     a:not([class]) {
@@ -27,7 +27,7 @@
       text-decoration: none;
       word-break: break-word;
 
-      @include apply-utility('leading', 'tight');
+      // @include apply-utility('leading', 'tight');
     }
 
     a:not([class]):hover {
