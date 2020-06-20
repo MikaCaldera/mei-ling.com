@@ -1,4 +1,18 @@
 /** Config */
+@import 'config/variables';
+@import 'config/external';
+
+/** Common */
+@import 'common/global';
+
+@import 'partials';
+@import 'components';
+
+
+///////////// ^ Michaels
+
+
+/** Config */
 @import 'config';
 @import 'config/variables';
 @import 'config/external';
@@ -17,54 +31,11 @@
 
 @import 'theme';
 
-// Local dependencies
-@import 'typography';
+// /**
+//  * PROJECT IMPORTS
+//  */
 
-/**
- * GLOBAL STYLES
- */
-html,
-body {
-  height: 100%;
-}
-
-body {
-  scroll-behavior: smooth;
-  display: flex;
-  flex-direction: column;
-}
-
-main {
-  flex: 1 0 auto;
-  &:focus {
-    outline: none;
-  }
-}
-
-hr {
-  display: block;
-  height: 1px;
-  max-width: 500px;
-  background: var(--color-stroke);
-  border: none;
-  margin: get-size(900) auto;
-}
-
-// For when metric attributes are added to img elements
-img {
-  height: auto;
-}
-
-:focus {
-  outline: 1px solid var(--color-theme-primary-glare);
-  outline-offset: 0.25rem;
-}
-
-/**
- * PROJECT IMPORTS
- */
-
-// Utils
-@import 'utilities/inner-wrapper';
-@import 'utilities/visually-hidden';
-@import 'utilities/wrapper';
+// // Utils
+// @import 'utilities/inner-wrapper';
+// @import 'utilities/visually-hidden';
+// @import 'utilities/wrapper';

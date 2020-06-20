@@ -85,7 +85,7 @@
     .video-player,
     video {
       width: 100vw;
-      max-width: map-get($metrics, 'wrap-max-width');
+      // max-width: map-get($metrics, 'wrap-max-width');
       margin-left: 50%; /*changing this value to 47% removes the horizontal scrollbar once the viewport is < 930px */
       transform: translateX(
         -50%
@@ -107,7 +107,7 @@
     figcaption {
       font-size: 0.8em;
       font-style: italic;
-      max-width: map-get($metrics, 'wrap-inner-max-width');
+      // max-width: map-get($metrics, 'wrap-inner-max-width');
       margin: 0.5rem auto 0 auto;
       padding: 0 get-size(500);
     }
@@ -130,7 +130,7 @@
     }
 
     h2 a {
-      @extend %visually-hidden;
+      // @extend %visually-hidden;
     }
 
     a {

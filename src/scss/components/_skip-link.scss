@@ -1,6 +1,6 @@
 // Hide skip link visually by default
 .skip-link:not(:focus) {
-  @extend %visually-hidden;
+  // @extend %visually-hidden;
 }
 
 .skip-link:focus {
